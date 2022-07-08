@@ -9,9 +9,20 @@ app = Flask(__name__)
 # We use the route decorator to tell Flask what URL should trigger the function that follows.
 # In Python, a decorator starts with the @ symbol, which is also called pie-notation.
 # Effectively, a decorator is a way of wrapping functions.
+# When creating a route and a view, make sure that 2 blank lines separate each function to keep it PEP8 compliant.
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
