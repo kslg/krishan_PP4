@@ -2,7 +2,7 @@
 import os
 # we need to do is to import the Flask class.
 # The capital F indicates that it's a class name, so it's important to use a uppercase F here.
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Effectively, a decorator is a way of wrapping functions.
 @app.route("/")
 def index():
-    return "Hello, World"
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
