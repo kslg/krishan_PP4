@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
     <title>Hello Flask</title>
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
     </nav>
-    <!-- block element which injects any content in between to the other .html files. -->
+    <!-- Block element which injects any content in between to the other .html files. -->
     {% block content %}
     {% endblock %}
 
